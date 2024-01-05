@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bg-container {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(img/marvel-cinematic-universe-1024x576.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    aspect-ratio: 16/9;
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+}
+
+.layer {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: scroll;
+    scroll-behavior: smooth;
+}
+
+.saga-infinito {
+    min-width: 100vh;
+    height: 100vh;
+    
+}
+
+h1 {
+    filter: none;
+    color: white;
+    font-weight: bold;
+    padding: 15px;
+    font-family: 'Tektur', sans-serif;
+    font-size: 40px;
+}
+
+h3 {
+    color: white;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-family: 'Tektur', sans-serif;
+}
+
+.film-box {
+    margin-left: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* flipcard part  */
+.flip-card {
+    width: 148px;
+    height: 214px; 
+    perspective: 1000px; 
+}
+
+.flip-card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front, .flip-card-back {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    backface-visibility: hidden;
+  }
+
+  .flip-card-front {
+    background-color: transparent;
+    color: black;
+  }
+
+  .flip-card-back {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    transform: rotateY(180deg);
+    border: 1px solid black;
+  }
